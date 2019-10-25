@@ -6,7 +6,7 @@ require conf/license/license-gplv2.inc
 
 PV = "1.0"
 
-COMPATIBLE_MACHINE = "viper4k"
+COMPATIBLE_MACHINE = "^(viper4k)$"
 
 SRC_URI = "file://amiko-loadmodules-viper4k.sh"
 

@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 RDEPENDS_${PN} = "libsdl"
 
-COMPATIBLE_MACHINE = "viper4k"
+COMPATIBLE_MACHINE = "^(viper4k)$"
 
 SRCDATE = "20190808"
 

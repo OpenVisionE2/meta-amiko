@@ -8,7 +8,7 @@ SRCDATE = "20170831"
 
 inherit kernel machine_kernel_pr
 
-COMPATIBLE_MACHINE = "vipert2c|vipercombo|vipercombohdd|viperslim"
+COMPATIBLE_MACHINE = "^(vipert2c|vipercombo|vipercombohdd|viperslim)$"
 
 SRC_URI[md5sum] = "cb28a0056279ad46af776fd5cdbcf88f"
 SRC_URI[sha256sum] = "a147b639445206ce85a56e155667ada38db1512e1c78fe9d4fd6d4be6f5a2e0e"
