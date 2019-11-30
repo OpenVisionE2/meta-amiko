@@ -36,8 +36,6 @@ IMAGEDIR ?= "${MACHINE}"
 FORCE ?= "no"
 
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
-IMAGEVERSION := "${IMAGE_NAME}"
-IMAGEVERSION[vardepsexclude] = "DATE"
 
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
