@@ -18,10 +18,10 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/linux-${PV}-base/COPYING;md5=d7810fab7487f
 # By default, kernel.bbclass modifies package names to allow multiple kernels
 # to be installed in parallel. We revert this change and rprovide the versioned
 # package names instead, to allow only one kernel to be installed.
-PKG_${KERNEL_PACKAGE_NAME}-base = "kernel-base"
-PKG_${KERNEL_PACKAGE_NAME}-image = "kernel-image"
-RPROVIDES_${KERNEL_PACKAGE_NAME}-base = "kernel-${KERNEL_VERSION}"
-RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "kernel-image-${KERNEL_VERSION}"
+PKG_${KERNEL_PACKAGE_NAME}-base = "${KERNEL_PACKAGE_NAME}-base"
+PKG_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image"
+RPROVIDES_${KERNEL_PACKAGE_NAME}-base = "${KERNEL_PACKAGE_NAME}-${KERNEL_VERSION}"
+RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image-${KERNEL_VERSION}"
 
 SRC_URI += "http://source.mynonpublic.com/entwopia/yh625tc/yh625tc-linux-${PV}-base-${SRCDATE}.tgz \
     file://defconfig \
