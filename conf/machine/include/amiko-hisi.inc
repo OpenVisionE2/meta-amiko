@@ -42,6 +42,7 @@ PREFERRED_PROVIDER_virtual/blindscan-dvbs = "amiko-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "amiko-showiframe-${MACHINE}"
 PREFERRED_RPROVIDER_aio-grab = "amiko-grab-${MACHINE}"
 PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicehisilicon"
+PREFERRED_VERSION_ffmpeg = "3.4.2"
 
 require conf/machine/include/tune-cortexa15.inc
 
