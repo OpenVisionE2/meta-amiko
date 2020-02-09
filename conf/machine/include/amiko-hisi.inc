@@ -48,7 +48,6 @@ require conf/machine/include/tune-cortexa15.inc
 
 MACHINE_EXTRA_RRECOMMENDS += " \
     gstreamer1.0-plugin-dvbmediasink \
-    gstreamer1.0-libav \
     "
 
 DVBPROVIDER = "kernel"
