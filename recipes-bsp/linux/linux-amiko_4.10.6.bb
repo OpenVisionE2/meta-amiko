@@ -38,6 +38,7 @@ SRC_URI += "http://source.mynonpublic.com/entwopia/yh625tc/yh625tc-linux-${PV}-b
     file://0001-revert-xhci-plat.patch \
     file://noforce_correct_pointer_usage.patch \
     file://0003-cp1emu-do-not-use-bools-for-arithmetic.patch \
+    file://0003-makefile-disable-warnings.patch \
     "
 
 S = "${WORKDIR}/linux-${PV}-base"
