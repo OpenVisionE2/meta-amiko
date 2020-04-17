@@ -1,5 +1,5 @@
 # We know about rtc
-MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
+MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
 	amiko-dvb-modules-${MACHINE} \
@@ -9,7 +9,7 @@ MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS = "\
 	kernel-module-cdfs \
 	"
 
-KERNEL_MODULE_AUTOLOAD = "xfs"
+KERNEL_MODULE_AUTOLOAD += "xfs"
 
 MACHINE_EXTRA_RRECOMMENDS = " \
 	${@bb.utils.contains("GST_VERSION", "1.0", "gstreamer1.0-plugin-dvbmediasink", "gst-plugin-dvbmediasink", d)} \
