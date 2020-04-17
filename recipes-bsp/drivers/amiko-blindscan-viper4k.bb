@@ -1,4 +1,4 @@
-SUMMARY = "blindscan for AMIKO Model ${MACHINE}"
+SUMMARY = "blindscan for ${MACHINE}"
 SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
