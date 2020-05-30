@@ -62,7 +62,6 @@ IMAGE_CMD_ubi_prepend = " \
 MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec textlcd 7seg"
 
 require conf/machine/include/tune-mips32.inc
-require conf/machine/include/amiko-wifi.inc
 
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096"
 UBINIZE_ARGS = "-m 2048 -p 128KiB -s 2048"
