@@ -6,7 +6,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 KERNEL_RELEASE = "4.10.6"
 SRCDATE = "20170831"
 
-inherit kernel machine_kernel_pr
+inherit kernel machine_kernel_pr samba_change_dialect
 
 COMPATIBLE_MACHINE = "^(vipert2c|vipercombo|vipercombohdd|viperslim)$"
 
