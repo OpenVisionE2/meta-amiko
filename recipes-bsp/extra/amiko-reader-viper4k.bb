@@ -8,14 +8,14 @@ RDEPENDS_${PN} = "libsdl"
 
 COMPATIBLE_MACHINE = "^(viper4k)$"
 
-SRCDATE = "20200415"
+SRCDATE = "20200612"
 
 PV = "${SRCDATE}"
 
 SRC_URI = "http://source.mynonpublic.com/amiko/${MACHINE}-libreader-${SRCDATE}.tar.gz"
 
-SRC_URI[md5sum] = "ff3e2549559cfc5f220dd5e99c8fbaf8"
-SRC_URI[sha256sum] = "36a8defd1cebeba5c6a4ad6889db260496c5e570006104f4809ed80a22084e8b"
+SRC_URI[md5sum] = "a7844dd57594a6349fc47e8f2e4e9c36"
+SRC_URI[sha256sum] = "230349703f5a105c0b7bdcbab7e2f178328d77102462d9dd6df66a1e8fb91dc6"
 
 S = "${WORKDIR}"
 
