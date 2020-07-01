@@ -5,6 +5,11 @@ BOX_BRAND = "amiko"
 
 DISTRO_FEATURES_remove = "x11 wayland"
 
+EXTRA_OECONF_append_pn-enigma2 = "--with-lcddev=/dev/null --with-alphablendingacceleration=always --with-blitaccelerationthreshold=250  --with-fillaccelerationthreshold=190000"
+
+SOC_FAMILY = "hisi3798mv200"
+HICHIPSET = "3798mv200"
+
 IMAGEDIR = "amiko/${MACHINE}"
 
 MTD_KERNEL = "mmcblk0p12"
@@ -28,7 +33,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     gptfdisk \
 "
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci"
 
 IMAGE_CLASSES  += "amiko-emmc_image"
 IMAGE_FSTYPES += "amikoemmc"
