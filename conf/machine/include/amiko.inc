@@ -1,6 +1,16 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
+MTD_KERNEL = "mtd2"
+MTD_ROOTFS = "mtd0"
+KERNEL_FILE = "kernel.bin"
+ROOTFS_FILE = "rootfs.bin"
+
+DVBPROVIDER = "kernel"
+DVBSKYPROVIDER = "kernel"
+
+GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
+
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
 	amiko-dvb-modules-${MACHINE} \
 	"
@@ -20,7 +30,7 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-amiko"
 PREFERRED_VERSION_linux-amiko = "4.10.6"
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
-KERNEL_CONSOLE = "null"
+KERNEL_CONSOLE = "ttyS0,115200n8"
 
 IMAGE_FSTYPES ?= "ubi"
 
@@ -54,12 +64,12 @@ IMAGE_CMD_ubi_prepend = " \
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
 
-MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec textlcd 7seg"
+MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec textlcd videoenhancement blindscan-tbs linuxwifi middleflash"
 
 require conf/machine/include/tune-mips32.inc
 
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096"
-UBINIZE_ARGS = "-m 2048 -p 128KiB -s 2048"
+UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
 CHIPSET = "bcm73625"
 
