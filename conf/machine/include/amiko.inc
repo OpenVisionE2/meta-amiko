@@ -64,7 +64,7 @@ IMAGE_CMD_ubi_prepend = " \
 	rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
 	"
 
-MACHINE_FEATURES += "alsa usbhost wlan 3dtv switchoff osdposition hdmicec textlcd videoenhancement blindscan-tbs linuxwifi middleflash"
+MACHINE_FEATURES += "alsa usbhost switchoff osdposition hdmicec textlcd videoenhancement blindscan-tbs"
 
 # Broken bootloader can only flash around 100 MB
 FLASHSIZE = "96"
