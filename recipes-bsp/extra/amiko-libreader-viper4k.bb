@@ -4,8 +4,6 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 require conf/license/license-gplv2.inc
 
-PV = "1.0"
-
 COMPATIBLE_MACHINE = "^(viper4k)$"
 
 SRC_URI = "file://amiko-libreader-viper4k.sh"

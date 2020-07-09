@@ -9,6 +9,8 @@ inherit deploy update-rc.d
 
 SRCDATE = "20200624"
 
+PV = "${SRCDATE}"
+
 COMPATIBLE_MACHINE = "^(viper4k)$"
 
 S = "${WORKDIR}/patitions"
