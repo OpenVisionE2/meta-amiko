@@ -16,7 +16,7 @@ INHIBIT_PACKAGE_STRIP = "1"
 
 inherit module
 
-FILES_${PN} += "${sysconfdir}/modules-load.d/_${MACHINE}.conf"
+FILES_${PN} += "${sysconfdir}/modules-load.d/_${MACHINE}.conf /lib/modules/${KV}/extra"
 
 do_compile() {
 }
