@@ -68,7 +68,7 @@ require conf/machine/include/tune-mips32.inc
 MKUBIFS_ARGS = "-m 2048 -e 126976 -c 4096"
 UBINIZE_ARGS = "-m 2048 -p 128KiB"
 
-CHIPSET = "bcm73625"
+SOC_FAMILY = "bcm73625"
 
 RCTYPE = "18"
 
