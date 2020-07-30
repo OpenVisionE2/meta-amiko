@@ -11,7 +11,7 @@ DVBSKYPROVIDER = "kernel"
 
 GLIBC_EXTRA_OECONF = "--with-tls --with-__thread"
 
-MACHINE_ESSENTIAL_EXTRA_RDEPENDS = "\
+MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	amiko-dvb-modules-${MACHINE} \
 	"
 
@@ -24,7 +24,7 @@ MACHINE_EXTRA_RRECOMMENDS += "\
 DVBMEDIASINK_CONFIG = "--with-wma --with-wmv --with-pcm --with-dts --with-eac3 --with-h265 --with-vb6 --with-vb8 --with-spark"
 
 TARGET_ARCH = "mipsel"
-DEFAULTTUNE ?= "mips32el"
+DEFAULTTUNE = "mips32el"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-amiko"
 PREFERRED_VERSION_linux-amiko = "4.10.6"
