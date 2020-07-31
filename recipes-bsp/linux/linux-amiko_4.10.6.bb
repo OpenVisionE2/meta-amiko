@@ -61,8 +61,8 @@ kernel_do_install_append() {
 pkg_postinst_${KERNEL_PACKAGE_NAME}-image () {
 	if [ "x$D" == "x" ]; then
 		if [ -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz ] ; then
-			flash_eraseall /dev/mtd2
-			nandwrite -p /dev/mtd2 /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
+			flash_eraseall /dev/${MTD_KERNEL}
+			nandwrite -p /dev/${MTD_KERNEL} /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
 			rm -f /${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}.gz
 		fi
 	fi
