@@ -85,3 +85,5 @@ IMAGE_CMD_amikoemmc_append = "\
     rm -f ${DEPLOY_DIR_IMAGE}/usb_update.bin; \
     rm -Rf ${IMAGEDIR}; \
     "
+
+EXTRA_ALSA = "mv200"
