@@ -1,9 +1,10 @@
 DESCRIPTION = "Linux kernel for ${MACHINE}"
 SECTION = "kernel"
 LICENSE = "GPLv2"
+
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-KERNEL_RELEASE = "4.10.6"
+KERNEL_RELEASE = "${KERNELVERSION}"
 SRCDATE = "20170831"
 
 inherit kernel machine_kernel_pr samba_change_dialect
@@ -23,23 +24,23 @@ PKG_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image"
 RPROVIDES_${KERNEL_PACKAGE_NAME}-base = "${KERNEL_PACKAGE_NAME}-${KERNEL_VERSION}"
 RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "${KERNEL_PACKAGE_NAME}-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://source.mynonpublic.com/entwopia/yh625tc/yh625tc-linux-${PV}-base-${SRCDATE}.tgz \
-    file://defconfig \
-    file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
-    file://0001-add-dmx-source-timecode.patch \
-    file://0002-nand-ecc-strength-and-bitflip.patch \
-    file://TBS-fixes-for-4.10-kernel.patch \
-    file://0001-Support-TBS-USB-drivers-for-4.6-kernel.patch \
-    file://0001-TBS-fixes-for-4.6-kernel.patch \
-    file://0001-STV-Add-PLS-support.patch \
-    file://0001-STV-Add-SNR-Signal-report-parameters.patch \
-    file://blindscan2.patch \
-    file://0001-stv090x-optimized-TS-sync-control.patch \
-    file://0001-revert-xhci-plat.patch \
-    file://noforce_correct_pointer_usage.patch \
-    file://0003-cp1emu-do-not-use-bools-for-arithmetic.patch \
-    file://0003-makefile-disable-warnings.patch \
-    "
+SRC_URI = "http://source.mynonpublic.com/entwopia/yh625tc/yh625tc-linux-${PV}-base-${SRCDATE}.tgz \
+	file://defconfig \
+	file://${OPENVISION_BASE}/meta-openvision/recipes-linux/kernel-patches/kernel-add-support-for-gcc${VISIONGCCVERSION}.patch \
+	file://0001-add-dmx-source-timecode.patch \
+	file://0002-nand-ecc-strength-and-bitflip.patch \
+	file://TBS-fixes-for-4.10-kernel.patch \
+	file://0001-Support-TBS-USB-drivers-for-4.6-kernel.patch \
+	file://0001-TBS-fixes-for-4.6-kernel.patch \
+	file://0001-STV-Add-PLS-support.patch \
+	file://0001-STV-Add-SNR-Signal-report-parameters.patch \
+	file://blindscan2.patch \
+	file://0001-stv090x-optimized-TS-sync-control.patch \
+	file://0001-revert-xhci-plat.patch \
+	file://noforce_correct_pointer_usage.patch \
+	file://0003-cp1emu-do-not-use-bools-for-arithmetic.patch \
+	file://0003-makefile-disable-warnings.patch \
+	"
 
 S = "${WORKDIR}/linux-${PV}-base"
 

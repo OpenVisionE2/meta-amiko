@@ -1,6 +1,8 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
+KERNELVERSION = "4.4.35"
+
 BOX_BRAND = "amiko"
 
 DISTRO_FEATURES_remove += "x11 wayland"
@@ -21,18 +23,18 @@ ROOTFS_FILE = "rootfs.tar.bz2"
 MTD_BLACK  = "mmcblk0"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
-    amiko-dvb-modules-${MACHINE} \
-    amiko-loadmodules-${MACHINE} \ 
-    amiko-libs-${MACHINE} \
-    amiko-hihalt-${MACHINE} \
-    amiko-reader-${MACHINE} \
-    amiko-libreader-${MACHINE} \
-    amiko-partitions-${MACHINE} \
-    amiko-tntfs-${HICHIPSET} \
-    amiko-buildimage \
-    e2fsprogs-resize2fs \
-    gptfdisk \
-"
+	amiko-dvb-modules-${MACHINE} \
+	amiko-loadmodules-${MACHINE} \ 
+	amiko-libs-${MACHINE} \
+	amiko-hihalt-${MACHINE} \
+	amiko-reader-${MACHINE} \
+	amiko-libreader-${MACHINE} \
+	amiko-partitions-${MACHINE} \
+	amiko-tntfs-${HICHIPSET} \
+	amiko-buildimage \
+	e2fsprogs-resize2fs \
+	gptfdisk \
+	"
 
 MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci HDMI AV_JACK vfdsymbol"
 
@@ -43,7 +45,7 @@ IMAGE_ROOTFS_SIZE ?= "524288"
 TARGET_ARCH = "arm"
 DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
-PREFERRED_VERSION_linux-amiko = "4.4.35"
+PREFERRED_VERSION_linux-amiko = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/kernel = "linux-amiko"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "amiko-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "amiko-showiframe-${MACHINE}"
@@ -53,12 +55,11 @@ PREFERRED_PROVIDER_virtual/enigma2-mediaservice = "enigma2-plugin-systemplugins-
 require conf/machine/include/tune-cortexa15.inc
 
 MACHINE_EXTRA_RRECOMMENDS += "\
-    gstreamer1.0-plugin-dvbmediasink \
-    "
+	gstreamer1.0-plugin-dvbmediasink \
+	"
 
 DVBPROVIDER = "kernel"
 DVBSKYPROVIDER = "kernel"
-
 
 require conf/machine/include/soc-family.inc
 

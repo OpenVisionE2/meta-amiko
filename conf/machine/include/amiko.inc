@@ -1,6 +1,8 @@
 # We know about rtc
 MACHINE_FEATURES_BACKFILL_CONSIDERED += "rtc"
 
+KERNELVERSION = "4.10.6"
+
 MTD_KERNEL = "mtd2"
 MTD_ROOTFS = "mtd0"
 KERNEL_FILE = "kernel.bin"
@@ -15,7 +17,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	amiko-dvb-modules-${MACHINE} \
 	"
 
-
 MACHINE_EXTRA_RRECOMMENDS += "\
 	gstreamer1.0-plugin-dvbmediasink \
 	"
@@ -26,13 +27,12 @@ TARGET_ARCH = "mipsel"
 DEFAULTTUNE = "mips32el"
 
 PREFERRED_PROVIDER_virtual/kernel = "linux-amiko"
-PREFERRED_VERSION_linux-amiko = "4.10.6"
+PREFERRED_VERSION_linux-amiko = "${KERNELVERSION}"
 KERNEL_IMAGETYPE = "vmlinux"
 KERNEL_OUTPUT = "${KERNEL_IMAGETYPE}"
 KERNEL_CONSOLE = "ttyS0,115200n8"
 
 IMAGE_FSTYPES ?= "ubi"
-
 
 IMAGE_CMD_ubi_append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
