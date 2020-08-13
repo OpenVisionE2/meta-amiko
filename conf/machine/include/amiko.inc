@@ -71,3 +71,5 @@ SOC_FAMILY = "bcm73625"
 RCTYPE = "18"
 
 BOX_BRAND = "amiko"
+
+RCNAME ?= "amiko2"

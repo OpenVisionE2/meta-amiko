@@ -90,3 +90,5 @@ IMAGE_CMD_amikoemmc_append = " \
 EXTRA_ALSA = "mv200"
 
 BLINDSCAN_BINARY = "amiko-blindscan"
+
+RCNAME = "amiko4"
