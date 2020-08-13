@@ -14,14 +14,14 @@ S = "${WORKDIR}"
 
 INHIBIT_PACKAGE_STRIP = "1"
 
-FILES_${PN} += "${sysconfdir}/modules-load.d/_${MACHINE}.conf ${base_libdir}/modules/${KV}/extra"
+FILES_${PN} += "${sysconfdir}/modules-load.d/_${MACHINE}.conf ${nonarch_base_libdir}/modules/${KV}/extra"
 
 do_compile() {
 }
 
 do_install() {
-	install -d ${D}${base_libdir}/modules/${KV}/extra
+	install -d ${D}${nonarch_base_libdir}/modules/${KV}/extra
 	install -d ${D}${sysconfdir}/modules-load.d
-    install -m 0755 ${WORKDIR}/dvb.ko ${D}${base_libdir}/modules/${KV}/extra
+    install -m 0755 ${WORKDIR}/dvb.ko ${D}${nonarch_base_libdir}/modules/${KV}/extra
     echo dvb >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
