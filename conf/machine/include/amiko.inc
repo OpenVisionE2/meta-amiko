@@ -73,3 +73,4 @@ RCTYPE = "18"
 BOX_BRAND = "amiko"
 
 RCNAME ?= "amiko2"
+RCIDNUM ?= "1"
