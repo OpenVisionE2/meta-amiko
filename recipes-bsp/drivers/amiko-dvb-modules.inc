@@ -5,7 +5,6 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-
 PV = "${KV}+${SRCDATE}"
 
 SRC_URI = "https://github.com/open-amiko/driver-amiko/releases/download/${SRCDATE}/${MACHINE}-drivers-${KV}-${SRCDATE}.zip"
@@ -22,6 +21,6 @@ do_compile() {
 do_install() {
 	install -d ${D}${nonarch_base_libdir}/modules/${KV}/extra
 	install -d ${D}${sysconfdir}/modules-load.d
-    install -m 0755 ${WORKDIR}/dvb.ko ${D}${nonarch_base_libdir}/modules/${KV}/extra
-    echo dvb >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
+	install -m 0755 ${WORKDIR}/dvb.ko ${D}${nonarch_base_libdir}/modules/${KV}/extra
+	echo "dvb" >> ${D}${sysconfdir}/modules-load.d/_${MACHINE}.conf
 }
