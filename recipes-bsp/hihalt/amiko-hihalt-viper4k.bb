@@ -29,11 +29,11 @@ S = "${WORKDIR}"
 do_install() {
     install -d ${D}${bindir}
     install -m 0755 ${S}/hihalt ${D}${bindir}
-    install -d ${D}${sysconfdir}/init.d
-    install -m 0755 ${S}/suspend.sh ${D}${sysconfdir}/init.d/suspend
+    install -d ${D}${INIT_D_DIR}
+    install -m 0755 ${S}/suspend.sh ${D}${INIT_D_DIR}/suspend
 }
 
 do_package_qa() {
 }
 
-FILES_${PN}  = "${bindir}/hihalt ${sysconfdir}/init.d"
+FILES_${PN}  = "${bindir}/hihalt ${INIT_D_DIR}"

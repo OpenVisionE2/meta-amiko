@@ -19,6 +19,6 @@ do_compile() {
 }
 
 do_install() {
-    install -d ${D}${sysconfdir}/init.d/
-    install -m 0755 ${WORKDIR}/amiko-libreader-viper4k.sh ${D}${sysconfdir}/init.d/amiko-libreader
+    install -d ${D}${INIT_D_DIR}/
+    install -m 0755 ${WORKDIR}/amiko-libreader-viper4k.sh ${D}${INIT_D_DIR}/amiko-libreader
 }
