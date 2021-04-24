@@ -24,7 +24,8 @@ MTD_BLACK  = "mmcblk0"
 
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	amiko-dvb-modules-${MACHINE} \
-	amiko-loadmodules-${MACHINE} \ 
+	amiko-loadmodules-${MACHINE} \
+	amiko-opengl-${MACHINE} \
 	amiko-libs-${MACHINE} \
 	amiko-hihalt-${MACHINE} \
 	amiko-reader-${MACHINE} \
@@ -46,6 +47,9 @@ DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
 PREFERRED_VERSION_linux-amiko = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/kernel = "linux-amiko"
+PREFERRED_PROVIDER_virtual/egl = "amiko-opengl-${MACHINE}" 
+PREFERRED_PROVIDER_virtual/libgles1 = "amiko-opengl-${MACHINE}"
+PREFERRED_PROVIDER_virtual/libgles2 = "amiko-opengl-${MACHINE}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "amiko-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "amiko-showiframe-${MACHINE}"
 PREFERRED_RPROVIDER_aio-grab = "amiko-grab-${MACHINE}"
