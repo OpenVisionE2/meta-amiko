@@ -36,7 +36,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 	gptfdisk \
 	"
 
-MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci HDMI AV_JACK vfdsymbol"
+MACHINE_FEATURES += "switchoff 7segment hdmicec textlcd emmc mmc blindscan-dvbs alsa hisil multitranscoding ci HDMI AV_JACK vfdsymbol kodi19"
 
 IMAGE_CLASSES  += "amiko-emmc_image"
 IMAGE_FSTYPES += "amikoemmc"
@@ -47,9 +47,9 @@ DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 
 PREFERRED_VERSION_linux-amiko = "${KERNELVERSION}"
 PREFERRED_PROVIDER_virtual/kernel = "linux-amiko"
-PREFERRED_PROVIDER_virtual/egl = "amiko-opengl-${MACHINE}" 
-PREFERRED_PROVIDER_virtual/libgles1 = "amiko-opengl-${MACHINE}"
-PREFERRED_PROVIDER_virtual/libgles2 = "amiko-opengl-${MACHINE}"
+PREFERRED_PROVIDER_virtual/egl ?= "amiko-opengl-${MACHINE}" 
+PREFERRED_PROVIDER_virtual/libgles1 ?= "amiko-opengl-${MACHINE}"
+PREFERRED_PROVIDER_virtual/libgles2 ?= "amiko-opengl-${MACHINE}"
 PREFERRED_PROVIDER_virtual/blindscan-dvbs = "amiko-blindscan-${MACHINE}"
 PREFERRED_RPROVIDER_showiframe = "amiko-showiframe-${MACHINE}"
 PREFERRED_RPROVIDER_aio-grab = "amiko-grab-${MACHINE}"
